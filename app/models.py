@@ -9,7 +9,7 @@ class User(db.Model):
     posts = db.relationship("Post", backref="author", lazy="dynamic")
 
     def __repr__(self):
-        return "<User {}".format(self.username) # Use f strings?
+        return "<User {}>".format(self.username) # Use f strings?
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
