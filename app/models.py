@@ -16,7 +16,12 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     posts = db.relationship("Post", backref="author", lazy="dynamic")
     about_me = db.Column(db.String(140))
-    last_seen = db.Column(db.DateTime, default=datetime.utcnow)\
+    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    followed = db.relationship(
+        "User", secondary=followers,
+        primaryjoin=(followers.c.follower_id == id),
+        secondaryjoin=(followers.c.followed_id == id),
+        backref=db.backref("followers", lazy="dynamic"), lazy="dynamic")
 
     def __repr__(self):
         return "<User {}>".format(self.username) # Use f strings?
@@ -31,12 +36,6 @@ class User(UserMixin, db.Model):
         # This uses the Gravatar service.
         digest = md5(self.email.lower().encode("utf-8")).hexdigest()
         return "https://www.gravatar.com/avatar/{}?d=identicon&s={}".format(digest, size)
-
-    followed = db.relationship(
-        "User", secondary=followers,
-        primaryjoin=(followers.c.follower_id == id),
-        secondaryjoin=(followers.c.followed_id == id),
-        backref=db.backref("followers", lazy="dynamic"), lazy="dynamic")
     
     def follow(self, user):
         if not self.is_following(user):

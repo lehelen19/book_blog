@@ -1,7 +1,8 @@
-from typing import Text
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
-from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, Length
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
+    TextAreaField
+from wtforms.validators import DataRequired, ValidationError, Email, EqualTo, \
+    Length
 from app.models import User
 
 class LoginForm(FlaskForm):
@@ -34,7 +35,7 @@ class EditProfileForm(FlaskForm):
     submit = SubmitField("Submit")
 
     def __init__(self, original_username, *args, **kwargs):
-        super(EditProfileForm, self).__init(*args, **kwargs)
+        super(EditProfileForm, self).__init__(*args, **kwargs)
         self.original_username = original_username
     
     def validate_username(self, username):
@@ -42,3 +43,6 @@ class EditProfileForm(FlaskForm):
             user = User.query.filter_by(username=self.username.data).first()
             if user is not None:
                 raise ValidationError("Please use a different username.")
+
+class EmptyForm(FlaskForm):
+    submit = SubmitField("Submit")
