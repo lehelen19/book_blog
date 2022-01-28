@@ -4,8 +4,9 @@ from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
 from datetime import datetime
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm, EmptyForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, EmptyForm, \
+    PostForm
+from app.models import User, Post
 
 @app.before_request
 def before_request():
@@ -17,17 +18,15 @@ def before_request():
 @app.route("/home")
 @login_required
 def home():
-    posts = [
-        {
-            "author": {"username": "little blue"},
-            "body": "I couldn't beat the Path of Pain..."
-        },
-        {
-            "author": {"username": "CrazyEighty8"},
-            "body": "Can someone please help my girlfriend regain her sanity?"
-        }
-    ]
-    return render_template("home.html", title="Home", posts=posts)
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash("Your post is live!")
+        return redirect(url_for("home"))
+    posts = current_user.followed_posts().all()
+    return render_template("home.html", title="Home", form=form, posts=posts)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
