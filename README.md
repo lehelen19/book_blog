@@ -1,5 +1,3 @@
-Created a blog site with Flask; with user authentication, user profiles, blog posts, and followers.
-
 Creating a blog website with Flask; includes user authentication, user profiles, blog posts, and followers.
 
 What I learned:
