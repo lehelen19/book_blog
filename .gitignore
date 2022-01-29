@@ -1,0 +1,4 @@
+__pycache__/
+mega
+.env
+app.db
