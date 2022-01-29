@@ -7,7 +7,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv()
 
 class Config(object):
-    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = os.environ.get("SECRET_KEY") or 'you-will-never-guess'
     # Flask-SQLAlchemy extension takes location of database, our base directory if url unprovided
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", "").replace(
         "postgres://", "postgresql://") or \
