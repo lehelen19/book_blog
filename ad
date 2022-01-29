@@ -1,0 +1,191 @@
+[33mcommit e1b7bf91c793c21b7eeec3a43018892263d35d03[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 16:42:51 2022 -0800
+
+    Restructured to application factory
+
+[33mcommit bc430ef9b724cc7ed4575b402e912aab65c99ace[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 15:50:23 2022 -0800
+
+    Localized time zomes with moment.js (flask-moment)
+
+[33mcommit 60c23d17f63957eeb1510e0ddb524adf49d4bd1d[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 14:09:38 2022 -0800
+
+    flask-bootstrap facelift
+
+[33mcommit 39042397488bae68d6f0e9352e7dce3537b98e47[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 13:50:42 2022 -0800
+
+    Added page nav to user profile, set config post number to 25
+
+[33mcommit 2e628c1962e60e9e033e7a210fa595497c29057a[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 13:47:17 2022 -0800
+
+    Added page links to home and explore pages
+
+[33mcommit 4e727b677dee1dafefa229949e242819c6bcbadc[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 13:43:12 2022 -0800
+
+    Added pagination support, config set to 3 pages
+
+[33mcommit e95d0654942b86eeabc47f059f54cdf05fe90e0d[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 13:38:59 2022 -0800
+
+    Fixed follow bug, make new blog post bug
+
+[33mcommit 76b7cd77a61201152075b30e2d8404dee233804a[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Fri Jan 28 13:25:36 2022 -0800
+
+    Staged migrations folder; added user blog post functionality
+
+[33mcommit a53a5385c52f6b04f68300ad9a9404e26a57cf07[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 16:07:00 2022 -0800
+
+    Fixed edit user profile bug
+
+[33mcommit 1c589cea601e1beeafcd350c317b09326da85d41[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 14:41:50 2022 -0800
+
+    Added unit tests for features; fixed minor typo
+
+[33mcommit ec0c7d859ca65ec3dfe025b59e1b55d0352c15c6[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 14:36:43 2022 -0800
+
+    Combining own and followed posts
+
+[33mcommit 2411a49ea6d133f53ac4e46d799fd160fe62b510[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 14:35:41 2022 -0800
+
+    added function to obtain posts from followed users
+
+[33mcommit 5a6fdf4712eb16a1c9cf324e4f12492543574bfb[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 14:31:53 2022 -0800
+
+    Added followers to database and methods for following/unfollowing
+
+[33mcommit 85630fc29bc01d575737c0007acf91ba25eb6753[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 27 14:18:21 2022 -0800
+
+    fixed bug of duplicating usernames
+
+[33mcommit dde892fe73777d53110db750cbd734527fc07e93[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 23:19:00 2022 -0800
+
+    Error handling plus errors emailed to admins
+
+[33mcommit 0f08aae0b28b028ee768e45c15aca720e37bd177[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 23:06:04 2022 -0800
+
+    Added ability and quick link to edit user profile
+
+[33mcommit b0fe6a6339bfbde417b065618fdf4c0bd0cba47f[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 22:39:52 2022 -0800
+
+    Added time last seen for user profiles
+
+[33mcommit 88397a4aceac579dc86f6e6e80428b568a55e671[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 22:37:47 2022 -0800
+
+    Migrated new database for user profile
+
+[33mcommit adb665085e2d56476ad01d87c42bd184fb583339[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 22:34:07 2022 -0800
+
+    Added avatars to all users
+
+[33mcommit 4b5e4dbaf9525dc4848227581546efdf3b8ee6aa[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 22:18:25 2022 -0800
+
+    Added user profile page
+
+[33mcommit f4439d4d41c82f56ee7d3e326db860a1fd69531b[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 16:24:54 2022 -0800
+
+    Fixed redirect bug
+
+[33mcommit d9d610fa19344eb62b52307b85bc499fe689dc6e[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 16:15:13 2022 -0800
+
+    Created registration form to allow users to register
+
+[33mcommit 71e32abec0e603c8e5e9ec1ac0734ef29e9dc914[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 15:49:51 2022 -0800
+
+    Added login requirement for views
+
+[33mcommit 19e2b31d5b52400ca261ba8e7bc42b76ede33487[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 15:42:01 2022 -0800
+
+    Added log out functionality
+
+[33mcommit 16a0d92e2065349489c63e00e262ebedd554a6cf[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 15:39:41 2022 -0800
+
+    Added log in functionality
+
+[33mcommit 7dc323e91c4d705302c643a9731f4a5465ebcf80[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 15:24:56 2022 -0800
+
+    Configured shell context for flask shell
+
+[33mcommit 53bd5109fb165fa34cf7e416c1490e786e249c77[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 26 15:10:08 2022 -0800
+
+    Added Post class to database, connected by user id
+
+[33mcommit c8885397e9ef6b87ea84f35d9cbc64421475aebe[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Thu Jan 20 18:32:21 2022 -0800
+
+    Set up sqlite database and alembic migration repo
+
+[33mcommit ca9428138fbd2edceb02640acae50f3e6cbba70e[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 19 16:04:04 2022 -0800
+
+    Added error handling and messages
+
+[33mcommit 9f35722b4125caea6926e7336446070cad460aa1[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 19 15:56:10 2022 -0800
+
+    Added log in forms and validators
+
+[33mcommit e7e0a80a1627022620ba0580d120602cb164ac4b[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 19 15:35:07 2022 -0800
+
+    Configured Flask app for forms
+
+[33mcommit 86e59a590b1949ece3e2fcc30bb782b124fdee58[m
+Author: Helen <le.helen19@gmail.com>
+Date:   Wed Jan 19 15:26:56 2022 -0800
+
+    Created home template and placeholder user, post objects
